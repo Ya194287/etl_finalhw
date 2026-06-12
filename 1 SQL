@@ -1,0 +1,32 @@
+CREATE TABLE transactions (
+    transaction_id Text NOT NULL,
+    customer_id Text,
+    transaction_date Date,
+    transaction_time Text,
+    hour_of_day Int64,
+    is_weekend Int64,
+    is_night_transaction Int64,
+    country Text,
+    city Text,
+    merchant_category Text,
+    payment_method Text,
+    device_type Text,
+    customer_age Int64,
+    credit_score Int64,
+    account_age_years Double,
+    account_balance Double,
+    transaction_amount Double,
+    num_prev_transactions Int64,
+    transaction_freq_monthly Int64,
+    distance_from_home_km Double,
+    time_since_last_txn_hrs Double,
+    is_international Int64,
+    failed_attempts Int64,
+    pin_changed_recently Int64,
+    is_fraud Int64,
+    fraud_type Text,
+    PRIMARY KEY (transaction_id)
+);
+
+SELECT COUNT(*) FROM transactions;
+SELECT * FROM transactions LIMIT 5;
